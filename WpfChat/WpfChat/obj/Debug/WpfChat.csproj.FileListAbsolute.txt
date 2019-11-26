@@ -1,0 +1,15 @@
+D:\ChatExam\WpfChat\WpfChat\bin\Debug\WpfChat.exe.config
+D:\ChatExam\WpfChat\WpfChat\bin\Debug\WpfChat.exe
+D:\ChatExam\WpfChat\WpfChat\bin\Debug\WpfChat.pdb
+D:\ChatExam\WpfChat\WpfChat\obj\Debug\WpfChat.csprojAssemblyReference.cache
+D:\ChatExam\WpfChat\WpfChat\obj\Debug\MainWindow.g.cs
+D:\ChatExam\WpfChat\WpfChat\obj\Debug\App.g.cs
+D:\ChatExam\WpfChat\WpfChat\obj\Debug\WpfChat_MarkupCompile.cache
+D:\ChatExam\WpfChat\WpfChat\obj\Debug\WpfChat_MarkupCompile.lref
+D:\ChatExam\WpfChat\WpfChat\obj\Debug\MainWindow.baml
+D:\ChatExam\WpfChat\WpfChat\obj\Debug\WpfChat.g.resources
+D:\ChatExam\WpfChat\WpfChat\obj\Debug\WpfChat.Properties.Resources.resources
+D:\ChatExam\WpfChat\WpfChat\obj\Debug\WpfChat.csproj.GenerateResource.cache
+D:\ChatExam\WpfChat\WpfChat\obj\Debug\WpfChat.csproj.CoreCompileInputs.cache
+D:\ChatExam\WpfChat\WpfChat\obj\Debug\WpfChat.exe
+D:\ChatExam\WpfChat\WpfChat\obj\Debug\WpfChat.pdb
