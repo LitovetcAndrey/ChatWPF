@@ -1,2 +1,2 @@
 Chat WPF 
-Добввлю новую строку 
+Add new row
