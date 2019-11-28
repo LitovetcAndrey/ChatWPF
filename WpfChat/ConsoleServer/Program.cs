@@ -11,20 +11,24 @@ namespace ConsoleServer
 {
     class Program
     {
-        const int PORT = 55555;
-        static TcpListener listener = null;
-
+        static List<TcpClient> clients = new List<TcpClient>();
+        static TcpListener server = null;
+        static int countF = 0;
         static void Main(string[] args)
         {
             try
             {
-                listener = new TcpListener(IPAddress.Parse("127.0.0.1"),PORT);
-                listener.Start();
+                server = new TcpListener(IPAddress.Parse(Data.IP), Data.PORT);
+                //запускаю слушателя 
+                server.Start();
                 while (true)
                 {
-                    TcpClient client = listener.AcceptTcpClient();
+                    TcpClient client = server.AcceptTcpClient();
+                    clients.Add(client);
+
                     ClientObject clientObject = new ClientObject(client);
-                    Listener(clientObject.Process());
+
+                    Listener(clientObject);
                 }
 
             }
@@ -35,14 +39,33 @@ namespace ConsoleServer
             }
             finally
             {
-
+                if (server != null)
+                    server.Stop();
             }
 
         }
 
-        private static void Listener(object p)
+        private static async void Listener(ClientObject cl)
         {
-            
+            await Task.Run(() =>
+            {
+                while (true)
+                {
+                    cl.Process();
+
+                    foreach (var client in clients)
+                    {
+                        if (!client.Equals(cl))
+                        {
+                            //отправлю файл кроме себя
+                            string fileName = Data.FileName + countF + ".txt";
+                            client.Client.SendFile(Data.FileName);
+                        }
+
+                    }
+
+                }
+            });
         }
     }
 }
